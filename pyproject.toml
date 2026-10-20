@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "debug-leftover"
+version = "0.1.0"
+description = "Find leftover debug statements (console.log, debugger, print, pdb, ...) before they ship."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "debug-leftover contributors" }]
+
+[project.scripts]
+debug-leftover = "debug_leftover.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["debug_leftover*"]
